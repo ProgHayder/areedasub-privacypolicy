@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreedAsub - Legal Documents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            position: relative;
+            padding: 8rem 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 0 3rem 3rem;
+            margin-bottom: -4rem;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+            padding: 0 2rem;
+        }
+
+        .doc-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.15);
+        }
+
+        .doc-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .doc-card h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .doc-card h2::before { display: none; }
+
+        .doc-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--accent);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 4rem 1rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .doc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">AreedAsub</div>
+        <h1>Legal Center</h1>
+        <p class="hero-subtitle">Access our platform's privacy policies and terms of service in both English and Arabic.</p>
+    </div>
+
+    <div class="container">
+        <main class="doc-grid">
+            <!-- Privacy Policy Card -->
+            <div class="doc-card">
+                <div>
+                    <div class="doc-icon">🛡️</div>
+                    <h2>Privacy Policy</h2>
+                    <p class="doc-description">Learn how we collect, use, and protect your personal and business data at AreedAsub.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="privacy-policy.html" class="btn btn-primary">English</a>
+                    <a href="privacy-policy-ar.html" class="btn btn-outline" dir="rtl">العربية</a>
+                </div>
+            </div>
+
+            <!-- Terms of Service Card -->
+            <div class="doc-card">
+                <div>
+                    <div class="doc-icon">📜</div>
+                    <h2>Terms of Service</h2>
+                    <p class="doc-description">Understand the rules, requirements, and legal agreements for using our industrial platform.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="terms.html" class="btn btn-primary">English</a>
+                    <a href="terms-ar.html" class="btn btn-outline" dir="rtl">العربية</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AreedAsub Industrial Platform. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
